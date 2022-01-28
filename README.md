@@ -22,3 +22,11 @@
 - Implementar las fórmulas en javascript
 - Crear funciones 
 - Integrar javascript con HTML
+
+## Taller N. 4: Análisis de Salarios
+
+- Definir las fórmulas
+- Implementar las fórmulas en javascript
+- Crear funciones 
+- Integrar javascript con HTML
+
