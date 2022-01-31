@@ -30,3 +30,16 @@
 - Crear funciones 
 - Integrar javascript con HTML
 
+## Proyecto Final: Análisis Financiero Personal
+
+- Definir las fórmulas
+    - Ingresos
+    - Gastos
+    - Activos
+    - Pasivos
+    - Capacidad ahorro e inversión
+    - Patrimonio neto
+    - Ratios comparativos
+- Implementar las fórmulas en javascript
+- Crear funciones 
+- Integrar javascript con HTML

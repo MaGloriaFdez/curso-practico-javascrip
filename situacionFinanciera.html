@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Situación Financiera</title>
+</head>
+<body>
+    <header>
+        <h1>
+          Análisis de tu situación financiera 
+        </h1>
+        <p>Este estado financiero personal sirve para determinar tu situación económica actual.</p>
+        <p>Para hacer el análisis es necesario que ingreses información relativa a tus ingresos, gastos, bienes y deudas.</p>
+      </header>
+      <section>
+        <h2>INGRESOS</h2>
+        <form>
+          <label for="InputSalario">Salario: </label>
+          <input id="InputSalario" type="number" />
+          <br>
+    
+          <label for="InputRentas">Rentas:  </label>
+          <input id="InputRentas" type="number" />
+          <br>
+          
+          <label for="InputDividendos">Dividendos: </label>
+          <input id="InputDividendos" type="number" />
+          <br>
+
+          <label for="InputIntereses">Intereses: </label>
+          <input id="InputIntereses" type="number" />
+          <br>
+
+          <label for="InputOtros">Otros ingresos:</label>
+          <input id="InputOtros" type="number" />
+          <br>
+    
+          <button type="button" onclick="onClickButtonIngresos()">
+            Calcular ingresos
+          </button>
+          <br>
+
+          <p id="ResultI"></p>
+          <p id="ResultIA"></p>
+        </form>
+      </section>
+      <section>
+        <h2>GASTOS</h2>
+        <form>
+          <label for="InputGHipoteca">Hipoteca: </label>
+          <input id="InputGHipoteca" type="number" />
+          <br>
+
+          <label for="InputIServicios">Servicios: </label>
+          <input id="InputIServicios" type="number" />
+          <br>
+    
+          <label for="InputIPrestamos">Prestamos:  </label>
+          <input id="InputIPrestamos" type="number" />
+          <br>
+          
+          <label for="InputITarjetas">Tarjetas: </label>
+          <input id="InputITarjetas" type="number" />
+          <br>
+
+          <label for="InputIAlimentacion">Alimentación: </label>
+          <input id="InputIAlimentacion" type="number" />
+          <br>
+
+          <label for="InputISeguros">Seguros: </label>
+          <input id="InputISeguros" type="number" />
+          <br>
+
+          <label for="InputIEducacion">Educación: </label>
+          <input id="InputIEducacion" type="number" />
+          <br>
+
+          <label for="InputIDeporte">Gimnasio/Deporte: </label>
+          <input id="InputIDeporte" type="number" />
+          <br>
+
+          <label for="InputIImpuestos">Impuestos: </label>
+          <input id="InputIImpuestos" type="number" />
+          <br>
+
+          <label for="InputIOtros">Otros ingresos:</label>
+          <input id="InputIIOtros" type="number" />
+          <br>
+    
+          <button type="button" onclick="onClickButtonGastos()">
+            Calcular egresos
+          </button>
+          <br>
+
+          <p id="ResultG"></p>
+          <p id="ResultGA"></p>
+          <br>
+        </form>
+      </section>
+    
+    <script src="./situacionFinanciera.js"></script>
+    <script src="./analisisFinanciero.js"></script>
+</body>
+</html>
