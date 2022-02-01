@@ -35,10 +35,10 @@ body
     font-size: 20px;
 }
 #important{
-    font-weight: 600;
-    font-size: 1.1em;
+    font-size: 16px;
     color: red;
 }
+
 .section_ {
     width: 70%;
     padding: 1em;
