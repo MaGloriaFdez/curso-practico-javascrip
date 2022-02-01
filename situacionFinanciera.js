@@ -47,18 +47,21 @@ function onClickButtonGastos(){
     const prestamos = document.getElementById("InputPrestamos").value; 
     const tarjetas = document.getElementById("InputTarjetas").value;  
     const alimentacion = document.getElementById("InputAlimentacion").value;  
+    const combustible = document.getElementById("InputCombustible").value;  
+    const suscripciones = document.getElementById("InputSuscripciones").value;  
     const seguros = document.getElementById("InputSeguros").value; 
     const educacion = document.getElementById("InputEducacion").value; 
     const deporte = document.getElementById("InputDeporte").value;  
     const impuestos = document.getElementById("InputImpuestos").value;  
     const otrosG =    document.getElementById("InputGOtros").value;  
     
-    debugger;
     gastos = (hipoteca == null || hipoteca == undefined || hipoteca == "") ? 0 : parseFloat(hipoteca);
     gastos += (servicios == null || servicios == undefined || servicios == "") ? 0 : parseFloat(servicios);
     gastos += (prestamos == null || prestamos == undefined || prestamos == "") ? 0 : parseFloat(prestamos);
     gastos += (tarjetas == null || tarjetas == undefined || tarjetas == "") ? 0 : parseFloat(tarjetas);
     gastos += (alimentacion == null || alimentacion == undefined || alimentacion == "") ? 0 : parseFloat(alimentacion);
+    gastos += (combustible == null || combustible == undefined || combustible == "") ? 0 : parseFloat(combustible);
+    gastos += (suscripciones == null || suscripciones == undefined || suscripciones == "") ? 0 : parseFloat(suscripciones);
     gastos += (seguros == null || seguros == undefined || seguros == "") ? 0 : parseFloat(seguros);
     gastos += (educacion == null || educacion == undefined || educacion == "") ? 0 : parseFloat(educacion);
     gastos += (deporte == null || deporte == undefined || deporte == "") ? 0 : parseFloat(deporte);
@@ -72,6 +75,7 @@ function onClickButtonGastos(){
         setPorcentajesGastos("Prestamos",calcularPorcentaje(gastos,prestamos));
         setPorcentajesGastos("Tarjetas",calcularPorcentaje(gastos,tarjetas));
         setPorcentajesGastos("Alimentación",calcularPorcentaje(gastos,alimentacion));
+        setPorcentajesGastos("Combustible",calcularPorcentaje(gastos,combustible));
         setPorcentajesGastos("Seguros",calcularPorcentaje(gastos,seguros));
         setPorcentajesGastos("Educación",calcularPorcentaje(gastos,educacion));
         setPorcentajesGastos("Deporte",calcularPorcentaje(gastos,deporte));
@@ -98,20 +102,22 @@ function onClickButtonIngresosGastos(){
         const porcentajeDeAhorro = parseFloat((capacidadAhorro / ingresos) * 100).toFixed(2);
         const ahorroIdeal = (ingresos * 0.20);
         const inversion = porcentajeDeAhorro - 20;
-        const msg1 = "Tu tasa de ahorro es del: ";
-        var msg2 ="%.";
-        if (porcentajeDeAhorro == 20){
-            msg2 += " Tu ahorro es la ideal (20% de los ingresos).";
-        }else{ 
-            print("ResultIG1","Tu ahorro ideal es de:"," "+parseFloat(ahorroIdeal).toFixed(2));
-            if (porcentajeDeAhorro < 20){
-                msg2 += " Tus posibilidades de ahorro están por debajo del porcentaje ideal (20% de los ingresos), debes plantearte lograr más ingresos o reducir gastos para lograr la menos el 20% de ahorro.";
+        if (porcentajeDeAhorro != NaN){
+            const msg1 = "Tu tasa de ahorro es del: ";
+            var msg2 ="%.";
+            if (porcentajeDeAhorro == 20){
+                msg2 += " Tu ahorro es la ideal (20% de los ingresos).";
+            }else{ 
+                print("ResultIG1","Tu ahorro ideal es de:"," "+parseFloat(ahorroIdeal).toFixed(2));
+                if (porcentajeDeAhorro < 20){
+                    msg2 += " Tus posibilidades de ahorro están por debajo del porcentaje ideal (20% de los ingresos), debes plantearte lograr más ingresos o reducir gastos para lograr la menos el 20% de ahorro.";
+                }
+                if (porcentajeDeAhorro > 20){
+                    msg2 += " Tu ahorro está por encima de % ideal (20% de los ingresos), puedes plantearte hacer alguna inversión nueva de hasta el "+parseInt(inversion)+"% de los ingresos.";
+                } 
             }
-            if (porcentajeDeAhorro > 20){
-                msg2 += " Tu ahorro está por encima de % ideal (20% de los ingresos), puedes plantearte hacer alguna inversión nueva de hasta el "+parseInt(inversion)+"% de los ingresos.";
-            } 
+            print("ResultIGA",msg1," "+parseInt(porcentajeDeAhorro),msg2);
         }
-        print("ResultIGA",msg1," "+parseInt(porcentajeDeAhorro),msg2);
     }
 }
 
@@ -174,7 +180,6 @@ function onClickButtonPasivos(){
     pasivos += (otrosP == null || otrosP == undefined || otrosP == "") ? 0 : parseFloat(otrosP);
     print("ResultP","Total de pasivos: €",pasivos);
 
-    debugger;
     if ((pasivos != 0)){
         setPorcentajesPasivos("Hipotecas",calcularPorcentaje(pasivos,hipotecas));
         setPorcentajesPasivos("Préstamos vehículos",calcularPorcentaje(pasivos,prestamosVeh));
@@ -201,6 +206,9 @@ function onClickButtonActivosPasivos(){
     // Inmuebles - Hipotecas
     const inmuebles = document.getElementById("InputInmuebles").value;
     const hipotecas = document.getElementById("InputHipotecas").value; 
-    const valorInmuebles = parseFloat(inmuebles) - parseFloat(hipotecas);
-    print("ResultAPA","El benefício que aportan tus inmuebles (valor - hipotecas) es de: €",parseFloat(valorInmuebles).toFixed(2));
+    debugger;
+    if (inmuebles != "" || hipotecas != ""){
+        const valorInmuebles = parseFloat(inmuebles) - parseFloat(hipotecas);
+        print("ResultAPA","El benefício que aportan tus inmuebles (valor - hipotecas) es de: €",parseFloat(valorInmuebles).toFixed(2));
+    }
 }

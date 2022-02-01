@@ -34,14 +34,51 @@ body
 {
     font-size: 20px;
 }
-#secciones
-{
+#important{
+    font-weight: 600;
+    font-size: 1.1em;
+    color: red;
+}
+.section_ {
     width: 70%;
     padding: 1em;
     text-align: left;
     border: 1px solid #DDD;
     margin: 0 auto;
 }
+.section_btn {
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 10px 16px;
+    margin: 10px 0;
+
+    color: #ffffff;
+    background: rgba(255, 68, 0, 0.797);
+    border: 2px solid rgb(255, 68, 0);
+    border-radius: 5px;
+
+    cursor: pointer;
+    outline: none;
+}
+.section_btn:active {
+    background: rgb(255, 68, 0);
+}
+.section_result {
+    width: 70%;
+    padding: 1em;
+    text-align: left;
+    border: 1px solid rgb(103, 102, 102);
+    margin: 0 auto;
+}
+#ResultIG
+{
+    font-weight: 600;
+}
+#ResultAP
+{
+    font-weight: 600;
+}
+
 .form {
     font-size: 16px;
     margin:auto;
@@ -60,10 +97,6 @@ body
 .form_input {
     width: 100%;
     max-width: 225px;
-    
-    /* Fix for Safari/iOS date fields */
-    min-height: calc(0.9em +(0.8em * 2) + 0.6em);
-
     padding: 0.8em;
     font-size: 0.9em;
 
@@ -92,21 +125,4 @@ body
 }
 .form_btn:active {
     background: #0fa942;
-}
-.section_btn {
-    font-weight: 600;
-    font-size: 1.1em;
-    padding: 10px 16px;
-    margin: 10px 0;
-
-    color: #ffffff;
-    background: rgba(255, 68, 0, 0.938);
-    border: 2px solid rgb(255, 68, 0);
-    border-radius: 5px;
-
-    cursor: pointer;
-    outline: none;
-}
-.section_btn:active {
-    background: rgb(255, 68, 0);
 }

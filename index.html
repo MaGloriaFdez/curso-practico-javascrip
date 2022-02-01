@@ -14,8 +14,9 @@
         </h1>
         <p>Para entender tu situación financiera el primer paso es hacer un estado financiero personal.</p>
         <p>En su versión más simple, un estado financiero personal debe incluir un esquema de flujo de efectivo (ingresos – gastos) y una hoja de balance incluyendo los activos y los pasivos.</p>
+        <p id="important">En este sitio web NO se guarda la información que registras. Todos los datos indicados te pertenecen sólo a tí y nadie podra NUNCA JAMAS tener acceso a ellos.</p>
     </div>
-     <section id="secciones">
+     <section class="section_">
         <h2>INGRESOS</h2>
         <h4>Ingresa información relativa a todos los ingresos mensuales que recibes</h4>
         <form class="form">
@@ -41,12 +42,12 @@
           <p id="ResultITop3"></p>
         </form>
       </section>
-      <section id="secciones">
+      <section class="section_">
         <h2>GASTOS</h2>
         <h4>Ingresa información relativa a todos los gastos mensuales que tienes</h4>
         <form>
           <div class="form_item">
-            <label class="form_label" for="InputHipoteca">Hipoteca: </label>
+            <label class="form_label" for="InputHipoteca">Hipoteca/Alquiler: </label>
             <input class="form_input" id="InputHipoteca" type="number" />
             <label class="form_label" for="InputServicios">Servicios: </label>
             <input class="form_input" id="InputServicios" type="number" />
@@ -56,7 +57,11 @@
             <input class="form_input" id="InputTarjetas" type="number" />
             <label class="form_label" for="InputAlimentacion">Alimentación: </label>
             <input class="form_input" id="InputAlimentacion" type="number" />
-            <label class="form_label" for="InputSeguros">Seguros: </label>
+            <label class="form_label" for="InputCombustible">Combustible: </label>
+            <input class="form_input" id="InputCombustible" type="number" />
+            <label class="form_label" for="InputSeguros">Seguros (importe mensual): </label>
+            <input class="form_input" id="InputSuscripciones" type="number" />
+            <label class="form_label" for="InputSuscripciones">Suscripciones (revistas, libros, Netflix, etc.): </label>
             <input class="form_input" id="InputSeguros" type="number" />
             <label class="form_label" for="InputEducacion">Educación: </label>
             <input class="form_input" id="InputEducacion" type="number" />
@@ -78,7 +83,7 @@
           <br>
         </form>
       </section>
-      <section id="secciones">
+      <section class="section_result">
         <h2>Ingresos VS Gastos</h2>
         <button class="section_btn" type="button" onclick="onClickButtonIngresosGastos()">
           Análisis ingresos vs gastos
@@ -89,7 +94,7 @@
         <p id="ResultIGA"></p>
         <br>
       </section>
-      <section id="secciones">
+      <section class="section_">
         <h2>ACTIVOS</h2>
         <h4>Los Activos son todos los bienes o derechos que posees y que son susceptibles de convertirse en dinero, en beneficios o en rendimientos económicos.</h4>
         <form>
@@ -126,7 +131,7 @@
           <br>
         </form>
       </section>
-      <section id="secciones">
+      <section class="section_">
         <h2>PASIVOS</h2>
         <h4>Los Pasivos son las deudas y obligaciones de pago.</h4>
         <form >
@@ -154,7 +159,7 @@
           <br>
         </form>
       </section>
-      <section id="secciones">
+      <section class="section_result">
         <h2>Activos VS Pasivos</h2>
         <button class="section_btn" type="button" onclick="onClickButtonActivosPasivos()">
           Análisis de activos vs pasivos
