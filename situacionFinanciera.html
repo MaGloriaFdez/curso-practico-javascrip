@@ -5,102 +5,168 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Análisis de Situación Financiera</title>
-</head>
+    <link rel="stylesheet" href="css/estilos.css"/>
+  </head>
 <body>
-    <header>
-        <h1>
+    <div id="container">
+        <h1 id="cabecera">
           Análisis de tu situación financiera 
         </h1>
-        <p>Este estado financiero personal sirve para determinar tu situación económica actual.</p>
-        <p>Para hacer el análisis es necesario que ingreses información relativa a tus ingresos, gastos, bienes y deudas.</p>
-      </header>
-      <section>
+        <p>Para entender tu situación financiera el primer paso es hacer un estado financiero personal.</p>
+        <p>En su versión más simple, un estado financiero personal debe incluir un esquema de flujo de efectivo (ingresos – gastos) y una hoja de balance incluyendo los activos y los pasivos.</p>
+    </div>
+     <section id="secciones">
         <h2>INGRESOS</h2>
-        <form>
-          <label for="InputSalario">Salario: </label>
-          <input id="InputSalario" type="number" />
-          <br>
-    
-          <label for="InputRentas">Rentas:  </label>
-          <input id="InputRentas" type="number" />
-          <br>
-          
-          <label for="InputDividendos">Dividendos: </label>
-          <input id="InputDividendos" type="number" />
-          <br>
-
-          <label for="InputIntereses">Intereses: </label>
-          <input id="InputIntereses" type="number" />
-          <br>
-
-          <label for="InputOtros">Otros ingresos:</label>
-          <input id="InputOtros" type="number" />
-          <br>
-    
-          <button type="button" onclick="onClickButtonIngresos()">
-            Calcular ingresos
+        <h4>Ingresa información relativa a todos los ingresos mensuales que recibes</h4>
+        <form class="form">
+          <div class="form_item">
+            <label class="form_label" for="InputSalario">Salario: </label>
+            <input class="form_input" id="InputSalario" type="number" />
+            <label class="form_label" for="InputRentas">Rentas:  </label>
+            <input class="form_input" id="InputRentas" type="number" />
+            <label class="form_label" for="InputDividendos">Dividendos: </label>
+            <input class="form_input" id="InputDividendos" type="number" />
+            <label class="form_label" for="InputIntereses">Intereses: </label>
+            <input class="form_input" id="InputIntereses" type="number" />
+            <label class="form_label" for="InputOtros">Otros ingresos:</label>
+            <input class="form_input" id="InputOtros" type="number" />
+          </div>
+              
+          <button class="form_btn" type="button" onclick="onClickButtonIngresos()">
+            Análisis ingresos
           </button>
-          <br>
 
           <p id="ResultI"></p>
           <p id="ResultIA"></p>
+          <p id="ResultITop3"></p>
         </form>
       </section>
-      <section>
+      <section id="secciones">
         <h2>GASTOS</h2>
+        <h4>Ingresa información relativa a todos los gastos mensuales que tienes</h4>
         <form>
-          <label for="InputGHipoteca">Hipoteca: </label>
-          <input id="InputGHipoteca" type="number" />
-          <br>
-
-          <label for="InputIServicios">Servicios: </label>
-          <input id="InputIServicios" type="number" />
-          <br>
-    
-          <label for="InputIPrestamos">Prestamos:  </label>
-          <input id="InputIPrestamos" type="number" />
-          <br>
-          
-          <label for="InputITarjetas">Tarjetas: </label>
-          <input id="InputITarjetas" type="number" />
-          <br>
-
-          <label for="InputIAlimentacion">Alimentación: </label>
-          <input id="InputIAlimentacion" type="number" />
-          <br>
-
-          <label for="InputISeguros">Seguros: </label>
-          <input id="InputISeguros" type="number" />
-          <br>
-
-          <label for="InputIEducacion">Educación: </label>
-          <input id="InputIEducacion" type="number" />
-          <br>
-
-          <label for="InputIDeporte">Gimnasio/Deporte: </label>
-          <input id="InputIDeporte" type="number" />
-          <br>
-
-          <label for="InputIImpuestos">Impuestos: </label>
-          <input id="InputIImpuestos" type="number" />
-          <br>
-
-          <label for="InputIOtros">Otros ingresos:</label>
-          <input id="InputIIOtros" type="number" />
-          <br>
-    
-          <button type="button" onclick="onClickButtonGastos()">
-            Calcular egresos
+          <div class="form_item">
+            <label class="form_label" for="InputHipoteca">Hipoteca: </label>
+            <input class="form_input" id="InputHipoteca" type="number" />
+            <label class="form_label" for="InputServicios">Servicios: </label>
+            <input class="form_input" id="InputServicios" type="number" />
+            <label class="form_label" for="InputPrestamos">Prestamos:  </label>
+            <input class="form_input" id="InputPrestamos" type="number" />
+            <label class="form_label"  for="InputTarjetas">Tarjetas: </label>
+            <input class="form_input" id="InputTarjetas" type="number" />
+            <label class="form_label" for="InputAlimentacion">Alimentación: </label>
+            <input class="form_input" id="InputAlimentacion" type="number" />
+            <label class="form_label" for="InputSeguros">Seguros: </label>
+            <input class="form_input" id="InputSeguros" type="number" />
+            <label class="form_label" for="InputEducacion">Educación: </label>
+            <input class="form_input" id="InputEducacion" type="number" />
+            <label class="form_label" for="InputDeporte">Gimnasio/Deporte: </label>
+            <input class="form_input" id="InputDeporte" type="number" />
+            <label class="form_label" for="InputImpuestos">Impuestos: </label>
+            <input class="form_input" id="InputImpuestos" type="number" />
+            <label class="form_label" for="InputGOtros">Otros gastos: </label>
+            <input class="form_input" id="InputGOtros" type="number" />
+          </div>
+          <button class="form_btn" type="button" onclick="onClickButtonGastos()">
+            Análisis gastos
           </button>
           <br>
 
           <p id="ResultG"></p>
           <p id="ResultGA"></p>
+          <p id="ResultGTop3"></p>
           <br>
         </form>
       </section>
+      <section id="secciones">
+        <h2>Ingresos VS Gastos</h2>
+        <button class="section_btn" type="button" onclick="onClickButtonIngresosGastos()">
+          Análisis ingresos vs gastos
+        </button>
+        <br>
+        <p id="ResultIG"></p>
+        <p id="ResultIG1"></p>
+        <p id="ResultIGA"></p>
+        <br>
+      </section>
+      <section id="secciones">
+        <h2>ACTIVOS</h2>
+        <h4>Los Activos son todos los bienes o derechos que posees y que son susceptibles de convertirse en dinero, en beneficios o en rendimientos económicos.</h4>
+        <form>
+          <div class="form_item">
+            <label class="form_label" for="InputDiferidos">Diferidos (planes de pensión, seguros de vida, herencias): </label>
+            <input class="form_input" id="InputDiferidos" type="number" />
+            <label class="form_label" for="InputCuentas">Cuentas corriente y de ahorro: </label>
+            <input class="form_input" id="InputCuentas" type="number" />
+            <label class="form_label" for="InputAcciones">Acciones:  </label>
+            <input class="form_input" id="InputAcciones" type="number" />
+            <label class="form_label" for="InputDepositos">Depósitos bancarios: </label>
+            <input class="form_input" id="InputDepositos" type="number" />
+            <label class="form_label" for="InputCriptos">Criptomonedas y afines: </label>
+            <input class="form_input" id="InputCriptos" type="number" />
+            <label class="form_label" for="InputVehiculos">Vehículos (valor del mercado): </label>
+            <input class="form_input" id="InputVehiculos" type="number" />
+            <label class="form_label" for="InputJoyas">Joyas y metales preciosos (oro, plata): </label>
+            <input class="form_input" id="InputJoyas" type="number" />
+            <label class="form_label" for="InputEnseres">Activos personales (muebles, electrodomésticos,ropa, movil, pc, etc., equipos): </label>
+            <input class="form_input" id="InputEnseres" type="number" />
+            <label class="form_label" for="InputInmuebles">Inmuebles (valor de mercado): </label>
+            <input class="form_input" id="InputInmuebles" type="number" />
+            <label class="form_label" for="InputAOtros">Otros activos: </label>
+            <input class="form_input" id="InputAOtros" type="number" />
+          </div>
+          <button class="form_btn" type="button" onclick="onClickButtonActivos()">
+            Análisis de activos
+          </button>
+          <br>
+
+          <p id="ResultA"></p>
+          <p id="ResultAA"></p>
+          <p id="ResultATop3"></p>
+          <br>
+        </form>
+      </section>
+      <section id="secciones">
+        <h2>PASIVOS</h2>
+        <h4>Los Pasivos son las deudas y obligaciones de pago.</h4>
+        <form >
+          <div class="form_item">
+            <label class="form_label" for="InputHipotecas">Hipotecas: </label>
+            <input class="form_input" id="InputHipotecas" type="number" />
+            <label class="form_label" for="InputPrestamosVeh">Préstamos vehículos: </label>
+            <input class="form_input" id="InputPrestamosVeh" type="number" />
+            <label class="form_label" for="InputPrestamosPer">Préstamos personales:  </label>
+            <input class="form_input" id="InputPrestamosPer" type="number" />
+            <label class="form_label" for="InputTarjetasCre">Tarjetas de crédito: </label>
+            <input class="form_input" id="InputTarjetasCre" type="number" />
+            <label class="form_label" for="InputPOtros">Otras deudas: </label>
+            <input class="form_input" id="InputPOtros" type="number" />
+          </div>
     
-    <script src="./situacionFinanciera.js"></script>
-    <script src="./analisisFinanciero.js"></script>
+          <button class="form_btn" type="button" onclick="onClickButtonPasivos()">
+            Análisis de pasivos
+          </button>
+          <br>
+
+          <p id="ResultP"></p>
+          <p id="ResultPA"></p>
+          <p id="ResultPTop3"></p>
+          <br>
+        </form>
+      </section>
+      <section id="secciones">
+        <h2>Activos VS Pasivos</h2>
+        <button class="section_btn" type="button" onclick="onClickButtonActivosPasivos()">
+          Análisis de activos vs pasivos
+        </button>
+        <br>
+        <p id="ResultAP"></p>
+        <p id="ResultAPA"></p>
+        <br>
+      </section>
+
+
+      <script src="./analisisFinanciero.js"></script>
+      <script src="./situacionFinanciera.js"></script>
 </body>
 </html>
